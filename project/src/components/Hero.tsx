@@ -5,7 +5,7 @@ const Hero = () => {
     <div className="relative h-screen">
       <div className="absolute inset-0 bg-black/60 z-10" />
       <div className="图片1 absolute inset-0 bg-black">
-        {/* Background image will be added here */}
+        {background.png}
       </div>
       <div className="relative z-20 h-full flex flex-col items-center justify-center text-white">
         <h1 className="text-6xl md:text-8xl font-bold mb-4 text-center font-display">
