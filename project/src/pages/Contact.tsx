@@ -12,16 +12,18 @@ const Contact = () => {
             <div className="grid gap-8">
               <div>
                 <h2 className="text-2xl font-bold mb-4">Get in Touch</h2>
-                <p className="mb-2">小红书账号: @apollogenz</p>
-                <p className="mb-2">Email: contact@apollogenz.com</p>
+                <p className="mb-2">小红书官方账号ID: Apollo_Official, APOLLOwithU</p>
+                <p className="mb-2">Email: info.apollogenz@gmail.com</p>
                 <p>Location: Toronto, Canada</p>
+                <p>微信官方账号ID: APOLLOwithU</p>
+                <p>微信公众号: Apollo Gen-Z Media </p>
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div className="aspect-square bg-gray-800 rounded-lg flex items-center justify-center">
-                  二维码 1
+                  {wxid.jpg}
                 </div>
                 <div className="aspect-square bg-gray-800 rounded-lg flex items-center justify-center">
-                  二维码 2
+                  {wxgzh.jpg}
                 </div>
               </div>
             </div>

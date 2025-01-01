@@ -40,15 +40,18 @@ const About = () => {
           <h2 className="text-2xl font-bold mb-6">Contact Us</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
-              <p className="mb-2">Email: contact@apollogenz.com</p>
+              <p className="mb-2">Email: info.apollogenz@gmail.com</p>
               <p>Location: Toronto, Canada</p>
+              <p>小红书官方账号ID: Apollo_Official, APOLLOwithU</p>
+              <p>微信官方账号ID: APOLLOwithU</p>
+              <p>微信公众号: Apollo Gen-Z Media </p>
             </div>
             <div className="grid grid-cols-2 gap-4">
               <div className="aspect-square bg-gray-800 rounded-lg flex items-center justify-center">
-                二维码 1
+                {wxid.jpg}
               </div>
               <div className="aspect-square bg-gray-800 rounded-lg flex items-center justify-center">
-                二维码 2
+                {wxgzh.jpg}
               </div>
             </div>
           </div>
