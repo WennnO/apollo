@@ -1,4 +1,6 @@
 import React from 'react';
+import wxid from './wxid.jpg'; // Import wxid.jpg
+import wxgzh from './wxgzh.jpg'; // Import wxgzh.jpg
 
 const Service = () => {
   return (
@@ -39,11 +41,13 @@ const Service = () => {
               <p>微信公众号: Apollo Gen-Z Media </p>
             </div>
             <div className="grid grid-cols-2 gap-4">
+              {/* First image */}
               <div className="aspect-square bg-gray-800 rounded-lg flex items-center justify-center">
-                {wxid.jpg}
+                <img src={wxid} alt="WXID" className="rounded-lg object-cover h-full w-full" />
               </div>
+              {/* Second image */}
               <div className="aspect-square bg-gray-800 rounded-lg flex items-center justify-center">
-                {wxgzh.jpg}
+                <img src={wxgzh} alt="WXGZH" className="rounded-lg object-cover h-full w-full" />
               </div>
             </div>
           </div>
