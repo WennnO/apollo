@@ -10,7 +10,7 @@ const Hero = () => {
       <div className="absolute inset-0 bg-black/60 z-10" />
 /*
       <div className="图片1 absolute inset-0 bg-black">
-        {background.png}
+        {background}
       </div>
 */
       <div 
