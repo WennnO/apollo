@@ -1,6 +1,10 @@
 import React from 'react';
-import wxid from './wxid.jpg'; // Import wxid.jpg
-import wxgzh from './wxgzh.jpg'; // Import wxgzh.jpg
+
+const wxid = require('./wxid.jpg');
+const wxgzh = require('./wxgzh.jpg');
+
+// import wxid from './wxid.jpg'; // Import wxid.jpg
+// import wxgzh from './wxgzh.jpg'; // Import wxgzh.jpg
 
 const Service = () => {
   return (

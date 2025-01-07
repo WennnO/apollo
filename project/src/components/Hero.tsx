@@ -1,5 +1,8 @@
 import React from 'react';
-import background from './background.png';
+
+// import background from './background.png';
+
+const background = require('./background.png');
 
 const Hero = () => {
   return (
