@@ -1,10 +1,10 @@
 import React from 'react';
 
-const wxid = require('./wxid.jpg');
-const wxgzh = require('./wxgzh.jpg');
+// const wxid = require('./wxid.jpg');
+// const wxgzh = require('./wxgzh.jpg');
 
-// import wxid from './wxid.jpg'; // Import wxid.jpg
-// import wxgzh from './wxgzh.jpg'; // Import wxgzh.jpg
+import wxid from './wxid.jpg'; // Import wxid.jpg
+import wxgzh from './wxgzh.jpg'; // Import wxgzh.jpg
 
 const Experience = () => {
   return (

@@ -1,18 +1,14 @@
 import React from 'react';
 
-// import background from './background.png';
+ import background from './background.png';
 
-const background = require('./background.png');
+// const background = require('./background.png'); //require is not available in browser-side JavaScript
 
 const Hero = () => {
   return (
     <div className="relative h-screen">
       <div className="absolute inset-0 bg-black/60 z-10" />
-/*
-      <div className="图片1 absolute inset-0 bg-black">
-        {background}
-      </div>
-*/
+
       <div 
         className="absolute inset-0 bg-black" 
         style={{
