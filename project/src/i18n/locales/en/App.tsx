@@ -1,11 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import Experience from './pages/Experience';
-import About from './pages/About';
-import Service from './pages/Service';
-import Contact from './pages/Contact';
+import Header from '../../../components/Header';
+import Hero from '../../../components/Hero';
+import Experience from './Experience';
+import About from './About';
+import Service from './Service';
+import Contact from './Contact';
 
 function App() {
   return (

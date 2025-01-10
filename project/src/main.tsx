@@ -3,7 +3,7 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import './i18n'; // Import before App
-import App from './App.tsx';
+import App from './i18n/locales/en/App.tsx';
 import './index.css';
 
 createRoot(document.getElementById('root')!).render(
