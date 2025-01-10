@@ -1,10 +1,12 @@
 import React from 'react';
-
- import background from './background.png';
+import { useTranslation } from 'react-i18next';
+import background from './background.png';
 
 // const background = require('./background.png'); //require is not available in browser-side JavaScript
 
 const Hero = () => {
+  const { t } = useTranslation();
+  
   return (
     <div className="relative h-screen">
       <div className="absolute inset-0 bg-black/60 z-10" />

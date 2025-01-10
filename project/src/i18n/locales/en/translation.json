@@ -1,0 +1,13 @@
+{
+    "navigation": {
+      "home": "Home",
+      "about": "About",
+      "services": "Services",
+      "contact": "Contact"
+    },
+    "hero": {
+      "title": "Apollo Gen-Z Media",
+      "subtitle": "Experienced world-class concert planning"
+    }
+  }
+  
