@@ -1,4 +1,4 @@
-/*import React from 'react';
+import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 const Header = () => {
@@ -34,31 +34,3 @@ const Header = () => {
 }
 
 export default Header;
-*/
-
-import React from 'react';
-import { useTranslation } from 'react-i18next';
-import LanguageSwitcher from './LanguageSwitcher';
-
-const Navigation = () => {
-  const { t } = useTranslation();
-
-  return (
-    <nav className="fixed w-full z-30 top-0 text-white">
-      <div className="container mx-auto flex items-center justify-between p-4">
-        <div className="flex items-center">
-          {/* Your logo or brand name */}
-        </div>
-        <div className="flex items-center gap-6">
-          <a href="#home">{t('navigation.home')}</a>
-          <a href="#about">{t('navigation.about')}</a>
-          <a href="#services">{t('navigation.services')}</a>
-          <a href="#contact">{t('navigation.contact')}</a>
-          <LanguageSwitcher />
-        </div>
-      </div>
-    </nav>
-  );
-};
-
-export default Navigation;
