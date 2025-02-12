@@ -14,7 +14,7 @@ const About = () => {
       <div className="container mx-auto px-4">
         <h1 className="text-4xl font-bold text-center mb-12">About Us: Who are we?</h1>
 
-        <div className="max-4xl mx-auto mb-16">
+        <div className="max-3xl mx-auto mb-16">
           <p className="text-lg leading-relaxed mb-8 text-center">
             APOLLO GEN-Z Media Corp. 总部位于加拿大多伦多，拥有丰富的演出承接经验，宣传资源覆盖30+学生联盟及本地商会，成为加拿大首屈一指的新锐专业出海娱乐活动传播公司。除主办、协办及赞助本地活动外，APOLLO GEN-Z 通过自身的影响力及专业性，为感兴趣安排北美海外巡演，出海宣传，海外商演的全球艺人、公司提供全方位的服务，包括且不限于场地租赁、筹备、宣传推广、人员安排、售票管理、现场执行以及售后支持等，致力于为客户提供因地制宜、高品质、高效率的一站式活动解决方案，保证高上座率，深化海外知名度，进一步推升艺人商业价值。
           </p>
@@ -37,13 +37,13 @@ const About = () => {
           </div>
         </div>
 
-        <div className="max-4xl mx-auto mb-16">
+        <div className="max-3xl mx-auto mb-16">
           <h2 className="text-2xl font-bold mb-6">Canada Local Connection</h2>
           <h2 className="text-2xl font-bold mb-6">加拿大本地资源</h2>
-          <p className="text-lg leading-relaxed text-center">
+          <p className="text-lg leading-relaxed">
             Our extensive network in Canada encompasses strong relationships with local communities, premier venues, and technical support providers. These connections enable us to deliver seamless event experiences, from marketing and venue selection to setup and lighting preparation. Our established partnerships ensure efficient coordination and professional execution of every event detail.
           </p>
-          <p className="text-lg leading-relaxed text-center">
+          <p className="text-lg leading-relaxed">
             我们在多伦多乃至加拿大拥有广泛的网络，与当地社区、顶级场地和技术支持提供商建立了牢固的关系。这些关系使我们能够提供无缝的活动体验，从市场营销和场地选择到布置和灯光准备。我们已建立的合作伙伴关系可确保高效协调和专业执行每个活动细节。
           </p>
         </div>
