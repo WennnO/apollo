@@ -12,10 +12,6 @@ const Service = () => {
       <div className="container mx-auto px-4">
         <h1 className="text-4xl font-bold text-center mb-12">Our Services</h1>
 
-        <div className="bg-gray-800 rounded-lg aspect-video flex items-center justify-center mb-16">
-          团队介绍
-        </div>
-
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           {[
             { title: '主办方', image: 'service1' },
