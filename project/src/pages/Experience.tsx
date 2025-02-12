@@ -5,6 +5,18 @@ import React from 'react';
 
 import wxid from './wxid.jpg'; // Import wxid.jpg
 import wxgzh from './wxgzh.jpg'; // Import wxgzh.jpg
+import exp1 from './exp1.jpg';
+import exp2 from './exp2.jpg';
+import exp3 from './exp3.jpg';
+import exp4 from './exp4.jpg';
+import exp5 from './exp5.jpg';
+import exp6 from './exp6.jpg';
+import exp7 from './exp7.jpg';
+import exp8 from './exp8.jpg';
+import exp9 from './exp9.jpg';
+import exp10 from './exp10.jpg';
+import intro from './intro.jpg';
+
 
 const Experience = () => {
   return (
@@ -15,9 +27,17 @@ const Experience = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
           {[...Array(8)].map((_, index) => (
             <div key={index} className="aspect-square bg-gray-800 rounded-lg overflow-hidden">
-              <div className="w-full h-full flex items-center justify-center text-gray-500">
+              <img 
+                src={`/exp${index + 1}.jpg`}
+                alt={`Experience ${index + 1}`}
+                className="w-full h-full object-cover"
+                onError={(e) => {
+                  e.currentTarget.src = '/fallback-image.jpg' // Optional fallback image
+                }}
+              />
+              {/* <div className="w-full h-full flex items-center justify-center text-gray-500">
                 经验图片 {index + 1}
-              </div>
+              </div> */}
             </div>
           ))}
         </div>
