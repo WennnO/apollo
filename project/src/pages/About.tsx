@@ -5,6 +5,7 @@ import React from 'react';
 
 import wxid from './wxid.jpg'; // Import wxid.jpg
 import wxgzh from './wxgzh.jpg'; // Import wxgzh.jpg
+import intro from './intro.jpg'; 
 
 const About = () => {
   return (
@@ -31,7 +32,7 @@ const About = () => {
 
         <div className="mb-16">
           <div className="bg-gray-800 rounded-lg aspect-video flex items-center justify-center mb-8">
-            团队介绍
+            <img src={intro} alt="intro" className="rounded-lg object-cover h-full w-full" />
           </div>
         </div>
 
