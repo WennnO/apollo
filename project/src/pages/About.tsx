@@ -6,6 +6,7 @@ import React from 'react';
 import wxid from './wxid.jpg'; // Import wxid.jpg
 import wxgzh from './wxgzh.jpg'; // Import wxgzh.jpg
 import intro from './intro.jpg'; 
+import pastgallery from './pastgallery.png';
 
 const About = () => {
   return (
@@ -21,7 +22,7 @@ const About = () => {
 
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           <div className="bg-gray-800 rounded-lg aspect-video flex items-center justify-center">
-            Past Experience Image
+            <img src={pastgallery} alt="pastgallery" className="rounded-lg object-cover h-full w-full" />
           </div>
           <div className="flex items-center">
             <p className="text-lg">
@@ -37,9 +38,11 @@ const About = () => {
         </div>
 
         <div className="max-w-4xl mx-auto mb-16">
-          <h2 className="text-2xl font-bold mb-6">Toronto Local Connection</h2>
+          <h2 className="text-2xl font-bold mb-6">Canada Local Connection</h2>
+          <h2 className="text-2xl font-bold mb-6">加拿大本地资源</h2>
           <p className="text-lg leading-relaxed">
-            Our extensive network in Toronto encompasses strong relationships with local communities, premier venues, and technical support providers. These connections enable us to deliver seamless event experiences, from marketing and venue selection to setup and lighting preparation. Our established partnerships ensure efficient coordination and professional execution of every event detail.
+            Our extensive network in Canada encompasses strong relationships with local communities, premier venues, and technical support providers. These connections enable us to deliver seamless event experiences, from marketing and venue selection to setup and lighting preparation. Our established partnerships ensure efficient coordination and professional execution of every event detail.
+            我们在多伦多乃至加拿大拥有广泛的网络，与当地社区、顶级场地和技术支持提供商建立了牢固的关系。这些关系使我们能够提供无缝的活动体验，从市场营销和场地选择到布置和灯光准备。我们已建立的合作伙伴关系可确保高效协调和专业执行每个活动细节。
           </p>
         </div>
 
