@@ -42,7 +42,7 @@ const Experience = () => {
           ))}
         </div>
 
-        <div className="max-w-3xl mx-auto mb-16">
+        <div className="max-full mx-auto mb-16">
           <p className="text-lg leading-relaxed">
             我们的团队在音乐会和现场演出策划方面拥有卓越的业绩，为每场活动提供无与伦比的专业知识。我们的成员为众多备受瞩目的音乐会的成功做出了重要贡献，积极参与策划、执行和管理。我们的实践经验和深厚的行业知识确保我们处理的每场活动都符合最高的专业标准。
           </p>
