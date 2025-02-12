@@ -5,17 +5,17 @@ import React from 'react';
 
 import wxid from './wxid.jpg'; // Import wxid.jpg
 import wxgzh from './wxgzh.jpg'; // Import wxgzh.jpg
-import exp1 from './exp1.jpg';
-import exp2 from './exp2.jpg';
-import exp3 from './exp3.jpg';
-import exp4 from './exp4.jpg';
-import exp5 from './exp5.jpg';
-import exp6 from './exp6.jpg';
-import exp7 from './exp7.jpg';
-import exp8 from './exp8.jpg';
-import exp9 from './exp9.jpg';
-import exp10 from './exp10.jpg';
-import intro from './intro.jpg';
+// import exp1 from './exp1.jpg';
+// import exp2 from './exp2.jpg';
+// import exp3 from './exp3.jpg';
+// import exp4 from './exp4.jpg';
+// import exp5 from './exp5.jpg';
+// import exp6 from './exp6.jpg';
+// import exp7 from './exp7.jpg';
+// import exp8 from './exp8.jpg';
+// import exp9 from './exp9.jpg';
+// import exp10 from './exp10.jpg';
+// import intro from './intro.jpg';
 
 
 const Experience = () => {
