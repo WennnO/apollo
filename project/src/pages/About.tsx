@@ -31,7 +31,7 @@ const About = () => {
         </div>
 
         <div className="mb-16">
-          <div className="bg-gray-800 rounded-lg aspect-video flex items-center justify-center mb-8">
+          <div className="bg-gray-800 rounded-lg aspect-[2/1] flex items-center justify-center mb-8">
             <img src={intro} alt="intro" className="rounded-lg object-cover h-full w-full" />
           </div>
         </div>

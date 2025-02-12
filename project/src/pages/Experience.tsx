@@ -26,7 +26,7 @@ const Experience = () => {
         
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
           {[...Array(11)].map((_, index) => (
-            <div key={index} className="aspect-[4/3] bg-gray-800 rounded-lg overflow-hidden">
+            <div key={index} className="aspect-[3/4] bg-gray-800 rounded-lg overflow-hidden">
               <img 
                 src={`/exp${index + 1}.jpg`}
                 alt={`Experience ${index + 1}`}
