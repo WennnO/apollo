@@ -24,7 +24,7 @@ const Header = () => {
               className="h-24 w-24 object-contain" 
             />
           </Link>
-          <ul className="absolute left-1/2 transform -translate-x-1/2 flex space-x-8">
+          <ul className="absolute left-1/2 transform -translate-x-1/2 flex space-x-8 py4">
             {links.map((link) => (
               <li key={link.path}>
                 <Link
