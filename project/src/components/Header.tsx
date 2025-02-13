@@ -49,7 +49,7 @@ const Header = () => {
           </button>
 
           {/* Desktop Menu */}
-          <ul className="absolute left-1/2 transform -translate-x-1/2 flex space-x-8 py-4">
+          <ul className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 flex space-x-8 py-4">
             {links.map((link) => (
               <li key={link.path}>
                 <Link
