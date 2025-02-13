@@ -14,31 +14,31 @@ const Header = () => {
 
   return (
     <header className="fixed w-full z-50 bg-black/80 backdrop-blur-sm">
-      <nav className="container mx-auto px-4 py-4 relative">
-        {/* Logo */}
-        <Link to="/" className="absolute left-4 flex items-center">
-          <img 
-            src={logo} 
-            alt="Apollo Logo" 
-            className="h-12 w-12 object-contain"
-          />
-        </Link>
-
-        {/* Navigation Links */}
-        <ul className="absolute left-1/2 transform -translate-x-1/2 flex space-x-8">
-          {links.map((link) => (
-            <li key={link.path}>
-              <Link
-                to={link.path}
-                className={`text-white hover:text-purple-400 transition-colors ${
-                  location.pathname === link.path ? 'border-b-2 border-purple-500' : ''
-                }`}
-              >
-                {link.name}
-              </Link>
-            </li>
-          ))}
-        </ul>
+      <nav className="container mx-auto px-4 py-4">
+        <div className="flex justify-between items-center">
+          {/* Logo on the left */}
+          <Link to="/" className="absolute left-4 flex items-center">
+            <img 
+              src={logo} 
+              alt="Apollo Logo" 
+              className="h-24 w-24 object-contain" 
+            />
+          </Link>
+          <ul className="flex justify-center space-x-8">
+            {links.map((link) => (
+              <li key={link.path}>
+                <Link
+                  to={link.path}
+                  className={`text-white hover:text-purple-400 transition-colors ${
+                    location.pathname === link.path ? 'border-b-2 border-purple-500' : ''
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
       </nav>
     </header>
   );
