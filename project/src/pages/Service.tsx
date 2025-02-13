@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect }  from 'react';
 
 // const wxid = require('./wxid.jpg');
 // const wxgzh = require('./wxgzh.jpg');
@@ -11,6 +11,9 @@ import service3 from './service3.jpg'; // Import service3.jpg
 import service4 from './service4.jpg';
 
 const Service = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="min-h-screen bg-black text-white pt-20">
       <div className="container mx-auto px-4">

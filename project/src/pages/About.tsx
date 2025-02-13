@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect }  from 'react';
 
 // const wxid = require('./wxid.jpg');
 // const wxgzh = require('./wxgzh.jpg');
@@ -9,6 +9,9 @@ import intro from './intro.jpg';
 import pastgallery from './pastgallery.png';
 
 const About = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="min-h-screen bg-black text-white pt-20">
       <div className="container mx-auto px-4">
