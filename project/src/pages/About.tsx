@@ -53,10 +53,10 @@ const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
               <p className="mb-2">Email: info.apollogenz@gmail.com</p>
-              <p>Location: Toronto, Canada</p>
-              <p>小红书官方账号ID: Apollo_Official, APOLLOwithU</p>
-              <p>微信官方账号ID: APOLLOwithU</p>
-              <p>微信公众号: Apollo Gen-Z Media </p>
+              <p className="mb-2">Location: Toronto, Canada</p>
+              <p className="mb-2">小红书官方账号ID: Apollo_Official, APOLLOwithU</p>
+              <p className="mb-2">微信官方账号ID: APOLLOwithU</p>
+              <p className="mb-2">微信公众号: Apollo Gen-Z Media </p>
             </div>
             <div className="grid grid-cols-2 gap-4">
               {/* First image */}
