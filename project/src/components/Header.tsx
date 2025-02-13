@@ -18,11 +18,11 @@ const Header = () => {
       <nav className="container mx-auto px-4 py-4 md:px-8 md:py-8">
         <div className="relative flex justify-between items-center">
           {/* Logo */}
-          <Link to="/" className="flex items-center py-2 md:py-4">
+          <Link to="/" className="absolute left-4 flex items-center py-4">
             <img 
               src={logo} 
               alt="Apollo Logo" 
-              className="h-16 w-16 md:h-24 md:w-24 object-contain" 
+              className="h-24 w-24 object-contain" 
             />
           </Link>
 
@@ -48,21 +48,7 @@ const Header = () => {
             </svg>
           </button>
 
-          {/* Desktop Menu
-          <ul className="hidden md:flex md:space-x-8 md:items-center">
-            {links.map((link) => (
-              <li key={link.path}>
-                <Link
-                  to={link.path}
-                  className={`text-white hover:text-purple-400 transition-colors ${
-                    location.pathname === link.path ? 'border-b-2 border-purple-500' : ''
-                  }`}
-                >
-                  {link.name}
-                </Link>
-              </li>
-            ))}
-          </ul> */}
+          {/* Desktop Menu */}
           <ul className="absolute left-1/2 transform -translate-x-1/2 flex space-x-8 py-4">
             {links.map((link) => (
               <li key={link.path}>
