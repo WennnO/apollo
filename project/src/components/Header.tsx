@@ -29,7 +29,7 @@ const Header = () => {
               <li key={link.path}>
                 <Link
                   to={link.path}
-                  className={`text-white hover:text-purple-400 transition-colors text-lg${
+                  className={`text-white hover:text-purple-400 transition-colors ${
                     location.pathname === link.path ? 'border-b-2 border-purple-500' : ''
                   }`}
                 >
