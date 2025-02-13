@@ -48,8 +48,22 @@ const Header = () => {
             </svg>
           </button>
 
-          {/* Desktop Menu */}
+          {/* Desktop Menu
           <ul className="hidden md:flex md:space-x-8 md:items-center">
+            {links.map((link) => (
+              <li key={link.path}>
+                <Link
+                  to={link.path}
+                  className={`text-white hover:text-purple-400 transition-colors ${
+                    location.pathname === link.path ? 'border-b-2 border-purple-500' : ''
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              </li>
+            ))}
+          </ul> */}
+          <ul className="absolute left-1/2 transform -translate-x-1/2 flex space-x-8 py-4">
             {links.map((link) => (
               <li key={link.path}>
                 <Link
