@@ -17,14 +17,14 @@ const Header = () => {
       <nav className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           {/* Logo on the left */}
-          <Link to="/" className="absolute left-4 flex items-center">
+          <Link to="/" className="absolute left-4 flex items-center pt-4">
             <img 
               src={logo} 
               alt="Apollo Logo" 
               className="h-24 w-24 object-contain" 
             />
           </Link>
-          <ul className="flex justify-center space-x-8">
+          <ul className="absolute left-1/2 transform -translate-x-1/2 flex space-x-8">
             {links.map((link) => (
               <li key={link.path}>
                 <Link
