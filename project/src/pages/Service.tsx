@@ -16,7 +16,7 @@ const Service = () => {
       <div className="container mx-auto px-4">
         <h1 className="text-4xl font-bold text-center mb-12">Our Services</h1>
 
-        <div className="grid md:grid-cols-4 gap-8 mb-16">
+        <div className="grid md:grid-cols-4 gap-8 mb-16 text-center">
           {[
             { title: '主办方', image: service1 },
             { title: '承办方：演唱会/livehouse落地', image: service2 },
