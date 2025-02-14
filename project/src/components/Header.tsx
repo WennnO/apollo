@@ -28,7 +28,7 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button 
-            className="md:hidden p-2 text-white absolute right-1"
+            className="md:hidden p-2 text-white absolute right-0"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             <svg 
