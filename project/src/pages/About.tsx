@@ -15,6 +15,7 @@ const About = () => {
   return (
     <div className="min-h-screen bg-black text-white pt-20">
       <div className="container mx-auto px-4">
+        <br />
         <h1 className="text-4xl font-bold text-center mb-12">About Us: Who are we?</h1>
 
         <div className="max-3xl mx-auto mb-16">

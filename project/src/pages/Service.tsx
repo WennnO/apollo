@@ -17,6 +17,7 @@ const Service = () => {
   return (
     <div className="min-h-screen bg-black text-white pt-20">
       <div className="container mx-auto px-4">
+        <br />
         <h1 className="text-4xl font-bold text-center mb-12">Our Services</h1>
 
         <div className="grid md:grid-cols-4 gap-8 mb-16 text-center">
