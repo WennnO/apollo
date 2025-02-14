@@ -7,16 +7,8 @@ const Header = () => {
   const location = useLocation();
   const links = [
     { name: 'APOLLO', path: '/' },
-    { name: <span className="text-center whitespace-normal">
-      Past<br className="md:hidden" />Experience
-    </span>, 
-    path: '/experience' 
-  },
-  { name: <span className="text-center whitespace-normal">
-      About<br className="md:hidden" />Us
-    </span>, 
-    path: '/about' 
-  },
+    { name: 'Past\u00A0Experience', path: '/experience' },
+    { name: 'About\u00A0Us', path: '/about' },
     { name: 'Service', path: '/service' },
     { name: 'Contact', path: '/contact' }
   ];
@@ -85,10 +77,10 @@ const Header = () => {
           {/* Desktop Menu */}
           <ul className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 flex space-x-8 py-4">
             {links.map((link) => (
-              <li key={link.path} className="text-center">
+              <li key={link.path}>
                 <Link
                   to={link.path}
-                  className={`text-white hover:text-purple-400 transition-colors inline-block text-center ${
+                  className={`text-white hover:text-purple-400 transition-colors ${
                     location.pathname === link.path ? 'border-b-2 border-purple-500' : ''
                   }`}
                 >
@@ -106,7 +98,7 @@ const Header = () => {
             >
               <ul className="flex flex-col items-center py-4">
                 {links.map((link) => (
-                  <li key={link.path} className="w-full text-center">
+                  <li key={link.path} className="w-full">
                     <Link
                       to={link.path}
                       onClick={() => setIsMenuOpen(false)}
