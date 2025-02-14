@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import logo from './logo.png';
 
@@ -6,12 +6,37 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
   const links = [
-    { name: 'Apollo', path: '/' },
-    { name: 'Experience', path: '/experience' },
+    { name: 'APOLLO', path: '/' },
+    { name: 'Past Experience', path: '/experience' },
     { name: 'About Us', path: '/about' },
     { name: 'Service', path: '/service' },
     { name: 'Contact', path: '/contact' }
   ];
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const menuButton = document.querySelector('[data-menu-button]');
+      const menu = document.querySelector('[data-menu]');
+
+      if (
+        isMenuOpen && 
+        menuButton && 
+        menu && 
+        !(menuButton as HTMLElement).contains(event.target as Node) &&
+        !(menu as HTMLElement).contains(event.target as Node)
+      ) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    if (isMenuOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isMenuOpen]);
 
   return (
     <header className="fixed w-full z-50 bg-black/80 backdrop-blur-sm">
@@ -30,6 +55,7 @@ const Header = () => {
           <button 
             className="md:hidden p-2 text-white absolute right-0"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            data-menu-button
           >
             <svg 
               className="w-6 h-6" 
@@ -66,7 +92,10 @@ const Header = () => {
 
           {/* Mobile Menu */}
           {isMenuOpen && (
-            <div className="absolute top-full right-0 left-0 bg-black/90 md:hidden">
+            <div 
+              data-menu 
+              className="absolute top-full right-0 left-0 bg-black/90 md:hidden"
+            >
               <ul className="flex flex-col items-center py-4">
                 {links.map((link) => (
                   <li key={link.path} className="w-full">
