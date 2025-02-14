@@ -7,8 +7,16 @@ const Header = () => {
   const location = useLocation();
   const links = [
     { name: 'APOLLO', path: '/' },
-    { name: <span className="text-center whitespace-normal">Past<br />Experience</span>, path: '/experience' },
-    { name: <span className="text-center whitespace-normal">About<br />Us</span>, path: '/about' },
+    { name: <span className="text-center whitespace-normal">
+      Past<br className="md:hidden" />Experience
+    </span>, 
+    path: '/experience' 
+  },
+  { name: <span className="text-center whitespace-normal">
+      About<br className="md:hidden" />Us
+    </span>, 
+    path: '/about' 
+  },
     { name: 'Service', path: '/service' },
     { name: 'Contact', path: '/contact' }
   ];
