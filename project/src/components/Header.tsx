@@ -22,7 +22,7 @@ const Header = () => {
             <img 
               src={logo} 
               alt="Apollo Logo" 
-              className="h-24 w-24 object-contain" 
+              className="h-24 w-144 object-contain" 
             />
           </Link>
 
