@@ -7,8 +7,8 @@ const Header = () => {
   const location = useLocation();
   const links = [
     { name: 'APOLLO', path: '/' },
-    { name: 'Past Experience', path: '/experience' },
-    { name: 'About Us', path: '/about' },
+    { name: <span className="text-center whitespace-normal">Past<br />Experience</span>, path: '/experience' },
+    { name: <span className="text-center whitespace-normal">About<br />Us</span>, path: '/about' },
     { name: 'Service', path: '/service' },
     { name: 'Contact', path: '/contact' }
   ];
@@ -47,7 +47,7 @@ const Header = () => {
             <img 
               src={logo} 
               alt="Apollo Logo" 
-              className="h-10 w-60 object-contain -ml-8 md:ml-0" 
+              className="h-12 w-72 object-contain -ml-8 md:ml-0" 
             />
           </Link>
 
@@ -77,10 +77,10 @@ const Header = () => {
           {/* Desktop Menu */}
           <ul className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 flex space-x-8 py-4">
             {links.map((link) => (
-              <li key={link.path}>
+              <li key={link.path} className="text-center">
                 <Link
                   to={link.path}
-                  className={`text-white hover:text-purple-400 transition-colors ${
+                  className={`text-white hover:text-purple-400 transition-colors inline-block text-center ${
                     location.pathname === link.path ? 'border-b-2 border-purple-500' : ''
                   }`}
                 >
@@ -98,7 +98,7 @@ const Header = () => {
             >
               <ul className="flex flex-col items-center py-4">
                 {links.map((link) => (
-                  <li key={link.path} className="w-full">
+                  <li key={link.path} className="w-full text-center">
                     <Link
                       to={link.path}
                       onClick={() => setIsMenuOpen(false)}
