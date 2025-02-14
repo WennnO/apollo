@@ -18,7 +18,7 @@ const Header = () => {
       <nav className="container mx-auto px-12 py-8 md:px-8 md:py-8">
         <div className="relative flex justify-between items-center">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
+          <Link to="/" className="flex items-center pt-4">
             <img 
               src={logo} 
               alt="Apollo Logo" 
