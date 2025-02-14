@@ -18,11 +18,11 @@ const Header = () => {
       <nav className="container mx-auto px-12 py-8 md:px-8 md:py-8">
         <div className="relative flex justify-between items-center">
           {/* Logo */}
-          <Link to="/" className="absolute -left-8 sm:left-0 md:left-2 lg:left-4 flex items-center pt-4">
+          <Link to="/" className="flex items-center">
             <img 
               src={logo} 
               alt="Apollo Logo" 
-              className="h-10 w-60 object-contain" 
+              className="h-10 w-60 object-contain -ml-8 md:ml-0" 
             />
           </Link>
 
