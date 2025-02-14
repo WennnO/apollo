@@ -6,8 +6,8 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
   const links = [
-    { name: 'Apollo Gen-Z', path: '/' },
-    { name: 'Past Experience', path: '/experience' },
+    { name: 'Apollo', path: '/' },
+    { name: 'Experience', path: '/experience' },
     { name: 'About Us', path: '/about' },
     { name: 'Service', path: '/service' },
     { name: 'Contact', path: '/contact' }
