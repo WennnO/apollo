@@ -8,7 +8,7 @@ import wxgzh from './wxgzh.jpg'; // Import wxgzh.jpg
 import joe from './joe.jpg'; // Import joe.jpg
 
 
-const Service = () => {
+const Event = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -87,4 +87,4 @@ const Service = () => {
   );
 }
 
-export default Service;
+export default Event;
