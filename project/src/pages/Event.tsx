@@ -5,10 +5,8 @@ import React, { useEffect }  from 'react';
 
 import wxid from './wxid.jpg'; // Import wxid.jpg
 import wxgzh from './wxgzh.jpg'; // Import wxgzh.jpg
-import service1 from './service1.jpg'; // Import service1.jpg
-import service2 from './service2.jpg'; // Import service2.jpg
-import service3 from './service3.jpg'; // Import service3.jpg
-import service4 from './service4.jpg';
+import joe from './joe.jpg'; // Import joe.jpg
+
 
 const Service = () => {
   useEffect(() => {
