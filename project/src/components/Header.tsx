@@ -7,6 +7,7 @@ const Header = () => {
   const location = useLocation();
   const links = [
     { name: 'APOLLO', path: '/' },
+    { name: 'Event', path: '/event' },
     { name: 'Past\u00A0Experience', path: '/experience' },
     { name: 'About\u00A0Us', path: '/about' },
     { name: 'Service', path: '/service' },
