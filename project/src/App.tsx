@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Hero from './components/Hero';
+import Event from './pages/Event';
 import Experience from './pages/Experience';
 import About from './pages/About';
 import Service from './pages/Service';
@@ -14,6 +15,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Hero />} />
+          <Route path="/event" element={<Event />} />
           <Route path="/experience" element={<Experience />} />
           <Route path="/about" element={<About />} />
           <Route path="/service" element={<Service />} />
