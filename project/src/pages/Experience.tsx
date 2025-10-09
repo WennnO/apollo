@@ -29,7 +29,7 @@ const Experience = () => {
         <h1 className="text-4xl font-bold text-center mb-12">Our Past Experiences</h1>
         
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
-          {[...Array(11)].map((_, index) => (
+          {[...Array(13)].map((_, index) => (
             <div key={index} className="aspect-[3/4] bg-gray-800 rounded-lg overflow-hidden">
               <img 
                 src={`/exp${index + 1}.jpg`}

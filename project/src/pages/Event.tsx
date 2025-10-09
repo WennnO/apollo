@@ -24,11 +24,11 @@ const Event = () => {
 
           ].map((service, index) => (
             <div key={index} className="bg-gray-900 rounded-lg overflow-hidden">
-              <div className="aspect-video bg-gray-800 flex items-center justify-center">
+              <div className="bg-gray-800 flex items-center justify-center">
                 <img 
                   src={service.image} 
                   alt={service.title}
-                  className="w-full h-full object-cover"
+                  className="w-full h-auto"
                 />
               </div>
               <div className="p-6">
