@@ -32,34 +32,40 @@ const Header = () => {
 
     if (isMenuOpen) {
       document.addEventListener('mousedown', handleClickOutside);
+      // 防止背景滚动
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
     }
 
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
+      document.body.style.overflow = 'unset';
     };
   }, [isMenuOpen]);
 
   return (
-    <header className="fixed w-full z-50 bg-black/80 backdrop-blur-sm">
-      <nav className="container mx-auto px-8 py-4 md:px-8 md:py-4">
+    <header className="fixed w-full z-50 bg-black/80 backdrop-blur-md border-b border-purple-500/20 shadow-lg shadow-purple-500/10">
+      <nav className="container mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4 lg:py-5">
         <div className="relative flex justify-between items-center">
           {/* Logo */}
-          <Link to="/" className="flex items-center pt-4">
+          <Link to="/" className="flex items-center z-10 transition-transform hover:scale-105">
             <img 
               src={logo} 
               alt="Apollo Logo" 
-              className="h-12 w-72 object-contain -ml-8 md:ml-0" 
+              className="h-8 sm:h-10 md:h-12 w-auto max-w-[200px] sm:max-w-[240px] md:max-w-[288px] object-contain" 
             />
           </Link>
 
           {/* Mobile Menu Button */}
           <button 
-            className="md:hidden p-2 text-white absolute right-0"
+            className="lg:hidden relative z-10 p-2 text-white hover:text-purple-400 transition-all duration-300 rounded-lg hover:bg-purple-500/20"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             data-menu-button
+            aria-label="Toggle menu"
           >
             <svg 
-              className="w-6 h-6" 
+              className="w-6 h-6 transition-transform duration-300" 
               fill="none" 
               strokeLinecap="round" 
               strokeLinejoin="round" 
@@ -76,44 +82,81 @@ const Header = () => {
           </button>
 
           {/* Desktop Menu */}
-          <ul className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 flex space-x-8 py-4">
-            {links.map((link) => (
+          <ul className="hidden lg:flex items-center space-x-4 xl:space-x-6 2xl:space-x-8">
+            {links.map((link, index) => (
               <li key={link.path}>
                 <Link
                   to={link.path}
-                  className={`text-white hover:text-purple-400 transition-colors ${
-                    location.pathname === link.path ? 'border-b-2 border-purple-500' : ''
-                  }`}
+                  className={`
+                    relative px-3 xl:px-4 py-2 text-sm xl:text-base font-medium
+                    text-white/90 hover:text-white transition-all duration-300
+                    group
+                    ${location.pathname === link.path 
+                      ? 'text-white' 
+                      : ''
+                    }
+                  `}
+                  style={{
+                    animationDelay: `${index * 50}ms`
+                  }}
                 >
-                  {link.name}
+                  <span className="relative z-10">{link.name}</span>
+                  {/* Active indicator with gradient */}
+                  {location.pathname === link.path && (
+                    <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-purple-400 via-purple-500 to-purple-600 rounded-full shadow-lg shadow-purple-500/50" />
+                  )}
+                  {/* Hover effect */}
+                  <span className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-purple-600/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  {/* Glow effect on active */}
+                  {location.pathname === link.path && (
+                    <span className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-purple-600/20 rounded-lg blur-sm" />
+                  )}
                 </Link>
               </li>
             ))}
           </ul>
 
-          {/* Mobile Menu */}
-          {isMenuOpen && (
-            <div 
-              data-menu 
-              className="absolute top-full right-0 left-0 bg-black/90 md:hidden"
-            >
-              <ul className="flex flex-col items-center py-4">
-                {links.map((link) => (
-                  <li key={link.path} className="w-full">
-                    <Link
-                      to={link.path}
-                      onClick={() => setIsMenuOpen(false)}
-                      className={`block py-2 px-4 text-center text-white hover:text-purple-400 transition-colors ${
-                        location.pathname === link.path ? 'border-l-4 border-purple-500 bg-purple-500/20' : ''
-                      }`}
-                    >
-                      {link.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
+          {/* Mobile Menu with smooth animation */}
+          <div 
+            data-menu 
+            className={`
+              lg:hidden fixed inset-0 top-[73px] sm:top-[81px] bg-gradient-to-b from-black via-black/95 to-black
+              backdrop-blur-xl border-t border-purple-500/20
+              transform transition-all duration-300 ease-in-out
+              ${isMenuOpen 
+                ? 'translate-x-0 opacity-100 animate-slide-in' 
+                : 'translate-x-full opacity-0 pointer-events-none'
+              }
+            `}
+          >
+            <ul className="flex flex-col h-full overflow-y-auto pt-8 pb-20">
+              {links.map((link, index) => (
+                <li key={link.path} className="w-full">
+                  <Link
+                    to={link.path}
+                    onClick={() => setIsMenuOpen(false)}
+                    className={`
+                      relative block py-4 px-6 text-center text-lg font-medium
+                      transition-all duration-300
+                      ${location.pathname === link.path 
+                        ? 'text-white bg-gradient-to-r from-purple-500/20 to-purple-600/20 border-l-4 border-purple-500' 
+                        : 'text-white/80 hover:text-white hover:bg-purple-500/10'
+                      }
+                      ${isMenuOpen ? 'animate-fade-in-up' : ''}
+                    `}
+                    style={{
+                      animationDelay: `${index * 50}ms`
+                    }}
+                  >
+                    <span className="relative z-10">{link.name}</span>
+                    {location.pathname === link.path && (
+                      <span className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-purple-400 via-purple-500 to-purple-600 rounded-r-full shadow-lg shadow-purple-500/50" />
+                    )}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </nav>
     </header>
