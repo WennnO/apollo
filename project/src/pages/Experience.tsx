@@ -65,7 +65,7 @@ const Experience = () => {
               {/* Hover overlay effect */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
                 <span className="text-white text-sm font-medium transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                  查看详情 →
+                  View Details →
                 </span>
               </div>
               {/* Click indicator */}
