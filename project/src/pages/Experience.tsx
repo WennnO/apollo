@@ -17,11 +17,28 @@ import wxgzh from './wxgzh.jpg'; // Import wxgzh.jpg
 // import exp10 from './exp10.jpg';
 // import intro from './intro.jpg';
 
-
 const Experience = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  // 为每张图片预留链接placeholder，您可以在这里填入实际的网址
+  const experienceLinks = [
+    'https://mp.weixin.qq.com/s/CFHxhuhal706gjHlHS2vlA', // exp1 链接 placeholder - 替换为实际链接
+    'https://mp.weixin.qq.com/s/smelQSRuB-fyZnHRbsDxtQ', // exp2 链接 placeholder - 替换为实际链接
+    'https://mp.weixin.qq.com/s/N9RPDnZBlW0bfaIyZY1GcQ', // exp3 链接 placeholder - 替换为实际链接
+    'https://mp.weixin.qq.com/s/ygEQmsPCP5Ztx8GlwOKW3Q', // exp4 链接 placeholder - 替换为实际链接
+    'https://mp.weixin.qq.com/s/MtiHVpgUTCWRiIN6z2UQvg', // exp5 链接 placeholder - 替换为实际链接
+    'http://xhslink.com/o/89LIMwImsOz ', // exp6 链接 placeholder - 替换为实际链接
+    'https://mp.weixin.qq.com/s/SGjmayshBQrHXKUwPledAA', // exp7 链接 placeholder - 替换为实际链接
+    'http://xhslink.com/o/2nayOrfiHf3 ', // exp8 链接 placeholder - 替换为实际链接
+    'https://mp.weixin.qq.com/s/fXpu5lSJyG4qnxeUS1j1sw', // exp9 链接 placeholder - 替换为实际链接
+    'https://mp.weixin.qq.com/s/N9RPDnZBlW0bfaIyZY1GcQ', // exp10 链接 placeholder - 替换为实际链接
+    'https://mp.weixin.qq.com/s/N9RPDnZBlW0bfaIyZY1GcQ', // exp11 链接 placeholder - 替换为实际链接
+    'https://mp.weixin.qq.com/s/9Ir-vSfej9XDjlCpk04GXA', // exp12 链接 placeholder - 替换为实际链接
+    'https://mp.weixin.qq.com/s/SHBkFLp_7Wp0ZZ2hO7XSxg', // exp13 链接 placeholder - 替换为实际链接
+  ];
+
   return (
     <div className="min-h-screen bg-black text-white pt-20">
       <div className="container mx-auto px-4">
@@ -30,19 +47,34 @@ const Experience = () => {
         
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
           {[...Array(13)].map((_, index) => (
-            <div key={index} className="aspect-[3/4] bg-gray-800 rounded-lg overflow-hidden">
+            <a
+              key={index}
+              href={experienceLinks[index] || '#'}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="aspect-[3/4] bg-gray-800 rounded-lg overflow-hidden group relative transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/50"
+            >
               <img 
                 src={`/exp${index + 1}.jpg`}
                 alt={`Experience ${index + 1}`}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                 onError={(e) => {
                   e.currentTarget.src = '/fallback-image.jpg' // Optional fallback image
                 }}
               />
-              {/* <div className="w-full h-full flex items-center justify-center text-gray-500">
-                经验图片 {index + 1}
-              </div> */}
-            </div>
+              {/* Hover overlay effect */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
+                <span className="text-white text-sm font-medium transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                  查看详情 →
+                </span>
+              </div>
+              {/* Click indicator */}
+              <div className="absolute top-2 right-2 bg-purple-500/80 backdrop-blur-sm rounded-full p-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </div>
+            </a>
           ))}
         </div>
 
