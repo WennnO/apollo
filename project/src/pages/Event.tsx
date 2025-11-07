@@ -16,8 +16,10 @@ const Event = () => {
     <div className="min-h-screen bg-black text-white pt-20">
       <div className="container mx-auto px-4">
         <br />
-        <h1 className="text-4xl font-bold text-center mb-12">Upcoming Events</h1>
-
+        
+        {/* Just Finished Events Section */}
+        <h2 className="text-3xl font-bold text-center mb-8 text-purple-400">Just Finished</h2>
+        
         <div className="flex justify-center items-center mb-16 text-center">
           {[
             { title: '黄西 Joe Wong 脱口秀 ——《Between Jobs》多伦多大学站', image: joe, link: 'https://www.eventbrite.com/e/2025-university-of-toronto-joe-wongs-stand-up-comedy-tour-between-jobs-tickets-1244126709479?aff=oddtdtcreator' },
@@ -41,9 +43,9 @@ const Event = () => {
         <div className="max-3xl mx-auto mb-16">
           <p className="text-lg leading-relaxed">
           🌟 黄西脱口秀 多伦多大学站 🌟
-            🥵工作太卷，生活“水土不服”？“Between jobs”的迷茫，打工人的心酸，这场演出都能让你笑着共鸣！
+            🥵工作太卷，生活"水土不服"？"Between jobs"的迷茫，打工人的心酸，这场演出都能让你笑着共鸣！
             🔥4月4日与著名脱口秀演员黄西共度一个轻松愉快的夜晚，让笑声带走你的疲惫和压力！
-            🎤全新笑料！全新视角！这次黄西将带来他标志性的幽默，解析打工人的“工愁”交错与生存法则！
+            🎤全新笑料！全新视角！这次黄西将带来他标志性的幽默，解析打工人的"工愁"交错与生存法则！
             ✨别等了！快加入我们，与黄西一同迎接新的一年，在笑声中驱散压力，共享欢乐时光！
           </p>
           <br />
@@ -58,6 +60,17 @@ const Event = () => {
             2018年黄西被列入《第一代：让美国伟大的36名开拓性移民和难民》一书，为了解美国移民和难民的故事提供了独特的视角。
             除此之外，黄西还出版了许多个人书籍和电子书，进一步丰富了他在文学创作领域的影响力。他以多才多艺的艺术表现和深刻的见解，成为了备受瞩目的华人艺术家之一。2024年被引入亚洲名人堂。
           </p>
+        </div>
+
+        {/* Upcoming Events Section */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-center mb-8 text-purple-400">Upcoming Events</h2>
+          <div className="flex justify-center items-center">
+            <div className="bg-gray-900 rounded-lg p-12 text-center max-w-2xl">
+              <p className="text-2xl md:text-3xl font-medium text-gray-300 mb-4">敬请期待</p>
+              <p className="text-lg text-gray-400">更多精彩活动即将到来</p>
+            </div>
+          </div>
         </div>
 
         <div className="bg-gray-900 rounded-lg p-8">
